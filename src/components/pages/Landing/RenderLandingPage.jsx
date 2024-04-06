@@ -3,12 +3,16 @@ import React from 'react';
 // import GrantRatesByOfficeImg from '../../../styles/Images/bar-graph-no-text.png';
 // import GrantRatesByNationalityImg from '../../../styles/Images/pie-chart-no-text.png';
 // import GrantRatesOverTimeImg from '../../../styles/Images/line-graph-no-text.png';
+import GrantRatesByOfficeImg from '../../../styles/Images/bar-graph-no-text.png';
+import GrantRatesByNationalityImg from '../../../styles/Images/pie-chart-no-text.png';
+import GrantRatesOverTimeImg from '../../../styles/Images/line-graph-no-text.png';
 import HrfPhoto from '../../../styles/Images/paper-stack.jpg';
 import '../../../styles/RenderLandingPage.less';
 import { Button } from 'antd';
 import { useHistory } from 'react-router-dom';
 // for the purposes of testing PageNav
 // import PageNav from '../../common/PageNav';
+import PageNav from '../../common/PageNav';
 
 function RenderLandingPage(props) {
   const scrollToTop = () => {
@@ -31,16 +35,51 @@ function RenderLandingPage(props) {
         </div>
       </div>
 
-      {/* Graphs Section: Add code here for the graphs section for your first ticket */}
-      {/* <div className="graphs-section"> */}
-      <div className="view-more-data-btn-container">
-        <Button
-          type="default"
-          style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
-          onClick={() => history.push('/graphs')}
-        >
-          View the Data
-        </Button>
+      {/* Graphs Section: Add code here for the graphs section for your first ticket */
+      /* <div className="graphs-section"> */}
+      <div className="graphs-section">
+        <div className="Office graph-container">
+          <img
+            src={GrantRatesByOfficeImg}
+            alt="Grant Rates by Office go here"
+            className="graph1"
+          />
+          <h3>Search Grant Rates by Office</h3>
+        </div>
+        <div className="Nationality graph-container">
+          <img
+            src={GrantRatesByNationalityImg}
+            alt="Grant Rates by Nationality go here"
+            className="graph2"
+          />
+          <h3>Search Grant Rates by Nationality</h3>
+        </div>
+        <div className="Time graph-container">
+          <img
+            src={GrantRatesOverTimeImg}
+            alt="Grant graph goes here"
+            className="graph3"
+          />
+          <h3>Search Grant Rates Over Time</h3>
+        </div>
+      </div>
+      <div className="buttons-container">
+        <div className="view-more-data-btn-container">
+          <Button
+            type="default"
+            style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+            onClick={() => history.push('/graphs')}
+          >
+            View the Data
+          </Button>
+          <Button
+            type="default"
+            style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+            onClick={() => history.push('/download')}
+          >
+            Download the Data
+          </Button>
+        </div>
       </div>
 
       <div className="middle-section">
@@ -62,6 +101,55 @@ function RenderLandingPage(props) {
       <div>
         {/* Bottom Section: Add code here for the graphs section for your first ticket */}
         {/* <div className="bottom-section">*/}
+        <div className="bottom-section">
+          <div className="first-bottom-section-text-container">
+            <p>Systemic Disparity Insights</p>
+          </div>
+          <div className="second-bottom-section-text-container">
+            <div className="Trump-box">
+              <div className="Trump-percentage">
+                <p>36%</p>
+              </div>
+              <div className="Trump-text">
+                <p>
+                  By the end of the Trump administration, the average asylum
+                  office grant rate had fallen 36 percent from an average of 44
+                  percent in fiscal year 2016 to 28 percent in fiscal year 2020.
+                </p>
+              </div>
+            </div>
+            <div className="NY-box">
+              <div className="NY-office-percentage">
+                <p>5%</p>
+              </div>
+              <div className="NY-office-text">
+                <p>
+                  The New York asylum office grant rate dropped to 5 percent in
+                  fiscal year 2020.
+                </p>
+              </div>
+            </div>
+            <div className="Office-average">
+              <div className="Office-numbers">
+                <p>6x Lower</p>
+              </div>
+              <div className="Office-text">
+                Between fiscal year 2017 and 2020, the New York asylum office's
+                average grant rate was six times lower than the San Francisco
+                asylum office.
+              </div>
+            </div>
+          </div>
+          <div className="Read-more-button">
+            <Button
+              type="default"
+              style={{ backgroundColor: '#404C4A', color: '#FFFFFF' }}
+              onClick={() => history.push('/disparity')}
+            >
+              Read More
+            </Button>
+          </div>
+        </div>
         <p onClick={() => scrollToTop()} className="back-to-top">
           Back To Top ^
         </p>
