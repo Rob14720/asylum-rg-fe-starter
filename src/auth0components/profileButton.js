@@ -14,10 +14,14 @@ const ProfileButton = () => {
     return <div>Loading...</div>;
   }
 
+  if (!isAuthenticated) {
+    return null; // If not logged in, don't render the button
+  }
+
   return (
     <div>
       <Button onClick={toggleProfile}>Profile Info</Button>
-      {showProfile && isAuthenticated && (
+      {showProfile && (
         <div>
           <img src={user.picture} alt={user.name} />
           <h2>{user.name}</h2>
