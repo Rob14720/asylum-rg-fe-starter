@@ -6,7 +6,7 @@ import {
   // useHistory,
   Switch,
 } from 'react-router-dom';
-import { Auth0ProviderWithHistory } from '../src/auth0components/provider-with-history';
+import Auth0ProviderWithHistory from '../src/auth0components/provider-with-history';
 
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
@@ -17,8 +17,6 @@ import { HeaderContent } from './components/Layout/Header';
 
 // import { TablePage } from './components/pages/Table';
 
-import LoginButton from './auth0components/LoginButton';
-import LogoutButton from './auth0components/LogoutButton';
 import { Layout } from 'antd';
 import GraphsContainer from './components/pages/DataVisualizations/GraphsContainer';
 import { Provider } from 'react-redux';

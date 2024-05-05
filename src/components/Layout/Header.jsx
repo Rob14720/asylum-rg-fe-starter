@@ -3,6 +3,7 @@ import { Image } from 'antd';
 import { Link } from 'react-router-dom';
 import Logo from '../../styles/Images/WhiteLogo.png';
 import { colors } from '../../styles/data_vis_colors';
+import AuthenticationButton from '../../auth0components/AuthenticationButton';
 
 const { primary_accent_color } = colors;
 
@@ -22,6 +23,7 @@ function HeaderContent() {
         </a>
       </div>
       <div>
+        <AuthenticationButton />
         <Link to="/" style={{ color: '#E2F0F7', paddingRight: '75px' }}>
           Home
         </Link>

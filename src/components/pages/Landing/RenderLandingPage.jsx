@@ -7,6 +7,7 @@ import GrantRatesByOfficeImg from '../../../styles/Images/bar-graph-no-text.png'
 import GrantRatesByNationalityImg from '../../../styles/Images/pie-chart-no-text.png';
 import GrantRatesOverTimeImg from '../../../styles/Images/line-graph-no-text.png';
 import HrfPhoto from '../../../styles/Images/paper-stack.jpg';
+import ProfileButton from '../../../auth0components/profileButton';
 import '../../../styles/RenderLandingPage.less';
 import { Button } from 'antd';
 import { useHistory } from 'react-router-dom';
@@ -32,6 +33,9 @@ function RenderLandingPage(props) {
             explore USCIS data on Asylum Office decisions
           </h3>
         </div>
+      </div>
+      <div className="profile-button">
+        <ProfileButton />
       </div>
 
       {/* Graphs Section: Add code here for the graphs section for your first ticket */
